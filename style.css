@@ -1,0 +1,21 @@
+h1 {
+  font-family: Calibri;
+}
+
+h1 {
+  background-color: rgb(101, 163, 101);
+  color: black;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  width: 100%;
+  height: 60px;
+  text-align: center;
+  padding-top: 20px;
+}
+
+h2 {
+  font-family: Calibri;
+}
+
+.negrita {
+  font-weight: bold;
+}
