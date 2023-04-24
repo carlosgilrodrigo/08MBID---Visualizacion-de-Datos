@@ -14,8 +14,27 @@ h1 {
 
 h2 {
   font-family: Calibri;
+  text-align: left;
+  font-size: 30px;
+  height: 35px;
+  text-decoration: underline black;
 }
 
+h3 {
+  font-family: Calibri;
+  text-align: left;
+  font-size: 25px;
+}
+
+h4 {
+  font-family: Calibri;
+  text-align: left;
+  font-size: 18px;
+}
+
+p {
+  font-family: Calibri;
+}
 .negrita {
   font-weight: bold;
 }
