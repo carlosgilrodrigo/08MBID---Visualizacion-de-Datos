@@ -1,10 +1,12 @@
 <div id="app"></div>
 
-<h1>Resultados de la Premier League</h1>
+  <h1>Resultados de la Premier League</h1>
 
-<span class="negrita">Nombre: </span> Carlos Gil Rodrigo
+  <h2>Trabajo práctico de Visualización de Datos</h2>
+  
+  <span class="negrita">Nombre: </span> Carlos Gil Rodrigo
   <br>
-  <span class="negrita">Fecha: </span> 26/04/2023
+  <span class="negrita">Fecha: </span> 28/04/2023
   <br>
   <span class="negrita">URL:</span>
   <a href="https://js-y14mcl.stackblitz.io" target="_blank">
@@ -16,19 +18,73 @@
     https://github.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos
   </a>
 
-  <h2>Trabajo práctico</h2>
+  <h3>1. Introducción</h3>
+  <div class="text">
+    <p style="text-align: justify">
+    El trabajo práctico de la asignatura de Visualización de Datos consiste en la generación de una serie de visualizaciones gráficas a partir de un conjunto de datos utilizando varias herramientas. El objetivo es contestar a algunas preguntas relacionadas con el conjunto de datos mediante dichas gráficas.
+    </p>
+    <p style="text-align: justify">
+    El conjunto de datos elegido contiene los registros históricos de los partidos transcurridos entre 2009 y 2019 en la Premier League, liga inglesa de fútbol. Desde hace años me interesa el análisis de datos relacionados con el deporte, especialmente con el fútbol, por lo que en asignaturas anteriormente cursadas como Minería de Datos o Estadística Avanzada utilicé este dataset para llevar a cabo los trabajos prácticos.
+    </p>
+    <p style="text-align: justify">
+      El dataset pertenece a Kaggle, y se puede encontrar en el siguiente enlace:
+      <a href="https://www.kaggle.com/datasets/aj7amigo/english-premier-league-data-2009-2019" target="_blank">
+        https://www.kaggle.com/datasets/aj7amigo/english-premier-league-data-2009-2019
+      </a>.
+      Pese a que originalmente ya era un dataset bastante completo y limpio, en la asignatura de Minería de Datos pasó por un preprocesado de datos, incluyendo la limpieza y las transformaciones necesarias para tener un dataset preparado. Por ello, el conjunto de datos está listo para la visualización e interpretación de sus datos.
+    </p>
 
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vR5eoaUzcyPcxpGB05mecdEGkryQnDPk_7lr7Pc5EnyDJhKTMjww26VfAOElaa2m5EWjb-J353n5JsE/pubchart?oid=632312335&amp;format=interactive"></iframe>
+    <h4>1.1 Descripción de los datos</h4>
+    <p style="text-align: justify">
+    Se trata de un conjunto de datos compuesto por variables tanto categóricas como numéricas, que muestra las estadísticas de todos los partidos jugados en la Premier League entre los años 2009 y 2019. Algunas de las principales características del dataset son las siguientes: 
+    <br><br>
+      - Nombre de los equipos locales y visitantes.
+    <br>
+      - Número de goles de ambos equipos al descanso y al finalizar el partido.
+    <br>
+      - Resultado del partido al descanso y al final.
+    <br>
+      - Nombre del árbitro.
+    <br>
+      - Número total de tiros y de tiros a puerta de cada equipo. 
+    <br>
+      - Número de faltas cometidas y de tarjetas recibidas por cada equipo. 
+    <br>
+      - Número de córners de cada equipo.
+    <br>
+      - Día, mes y año en el que se jugó cada partido.
+    <br><br>
+    En total, el dataset una vez limpio y transformado contiene 26 columnas (atributos), la mayoría de ellas nombradas mediante abreviaturas, explicadas detalladamente en el enlace anterior de Kaggle. Muchos de estos atributos se utilizarán para contestar a las preguntas planteadas en el punto 1.3, cumpliendo así con el objetivo de este trabajo práctico. 
+    </p>
 
+    <h4>1.2 Audiencia</h4>
+    <p style="text-align: justify">
+      La audiencia es cualquier persona interesada en la visualización de datos, especialmente si es aficionada al mundo del deporte, aunque está enfocado sobre todo en el alumnado de la asignatura de Visualización de Datos. Aplicando algunas de las herramientas aprendidas en esta asignatura, se responderá a las preguntas elegidas de forma que la audiencia pueda llegar a comprender el objetivo y la problemática del trabajo práctico teniendo un mayor o un menor conocimiento sobre este tema.
+    </p>
 
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRq_TL1JQMbJOKCZH0ySfkz_CUY_teNW-16vtsVzZjTQdL0YWF0DoAW1xG4PyyYK22e75P9YVr-N9og/pubchart?oid=1320880203&amp;format=interactive"></iframe>
+    <h4>1.3 Objetivo y preguntas</h4>
+    <p style="text-align: justify">
+      El objetivo de este trabajo práctico consiste en responder a las siguientes preguntas relacionadas con el dataset de los resultados de la Premier League, de forma que se puedan llegar a visualizar y a comprender los datos generados por algunas herramientas a través de gráficos y diagramas.
+      <br><br>
+      Preguntas a responder:
+      <br><br>
+      - ¿Es predecible el resultado de un partido a partir de su resultado al descanso?
+      <br>
+      - ¿Es verdad que los equipos locales suelen conseguir más victorias que los equipos visitantes?
+      <br>
+      - ¿Un gran número de córners a favor implica un buen resultado en el partido?
+      <br>
+      - ¿Afectan realmente las tarjetas amarillas al resultado de un partido?
+      <br>
+      - ¿Es cierto que cuando hay muchos tiros en el partido también hay un gran número de goles?
+      <br><br>
+      Estas preguntas realmente son preguntas que siempre me han interesado acerca de los partidos de fútbol. Para responderlas, se utilizarán algunas herramientas para la creación de gráficos, como Google Sheet y DataWrapper.
+    </p>
 
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSji2kJ9KhhZkZz7dD9Nmf53TusOMYHExTPMnLzPF-Q9HHCzl3X9jg2YlGrwXtdpEcRgXyTWaW-WQ4S/pubchart?oid=81852083&amp;format=interactive"></iframe>
-  
-  <iframe width="600" height="371" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSj-7jTFhHnrb_vsltLdoWevGpzsgdkejiMb7XOlA2dnFj9QOgyGOa96jaH2BgkhVYv4wmTdbZGYoc9/pubchart?oid=556458340&amp;format=interactive"></iframe>
+  <h3>2. Metodología</h3>
 
-  <iframe title="Emisiones CO2" aria-label="Scatter Plot" id="datawrapper-chart-RKOLW" src="https://datawrapper.dwcdn.net/RKOLW/1/" scrolling="no" frameborder="0" style="border: none;" width="600" height="400" data-external="1"></iframe>
+  <h3>3. Resultados</h3>
 
-  <iframe title="Top 10 Emisiones CO2 en 2018" aria-label="Bar Chart" id="datawrapper-chart-JrLCq" src="https://datawrapper.dwcdn.net/JrLCq/2/" scrolling="no" frameborder="0" style="border: none;" width="600" height="324" data-external="1"></iframe>
+  <h3>4. Conclusión</h3>
 
 </div>
