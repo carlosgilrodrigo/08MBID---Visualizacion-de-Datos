@@ -68,17 +68,17 @@
       <br><br>
       Preguntas a responder:
       <br><br>
-      1 - ¿Es predecible el resultado de un partido a partir de su resultado al descanso?
+      1 - Se suele decir que el equipo que juega en su propio estadio delante de su propia afición tiene ventaja, pero ¿es cierto que los equipos locales suelen conseguir más victorias que los equipos visitantes?
       <br>
-      2 - ¿Es verdad que los equipos locales suelen conseguir más victorias que los equipos visitantes?
+      2 - ¿Qué impacto tienen las tarjetas en el resultado de los partidos?
       <br>
-      3 - ¿Un gran número de córners a favor implica un buen resultado en el partido?
+      3 - ¿Cuántos córners se suelen lanzar en los partidos y qué equipo es el que suele lanzar un mayor número córners?
       <br>
-      4 - ¿Cómo afectan las tarjetas rojas a los equipos locales y a los equipos visitantes en el resultado de un partido?
+      4 - ¿Cuáles son los resultados más repetidos en la Premier League?
       <br>
-      5 - ¿Es cierto que cuando hay muchos tiros en el partido también hay un gran número de goles?
+      5 - ¿Cuáles han sido los partidos con más tiros por parte de un mismo equipo y cuántos de ellos han sido a portería?
       <br><br>
-      Estas preguntas realmente son preguntas que siempre me han interesado acerca de los partidos de fútbol. Para responderlas, se utilizarán algunas herramientas para la creación de gráficos, como Google Sheet y DataWrapper.
+      Estas preguntas realmente son preguntas que siempre me han interesado acerca de diferentes aspectos de los partidos de fútbol. Para responderlas, se utilizarán algunas herramientas para la creación de gráficos, como Google Sheet, Python (Google Colab) y DataWrapper.
     </p>
 
   <h3>2. Metodología</h3>
@@ -87,27 +87,34 @@
   </p>
 
   <h3>3. Resultados</h3>
-  <h4>3.3 ¿Es verdad que los equipos locales suelen conseguir más victorias que los equipos visitantes?</h4>
+  <h4>3.1 Se suele decir que el equipo que juega en su propio estadio delante de su propia afición tiene ventaja, pero ¿es cierto que los equipos locales suelen conseguir más victorias que los equipos visitantes? (Google Sheets)</h4>
   <p style="text-align: justify">
-    Histórico de resultados
+    En el mundo del fútbol siempre se le ha dado mucha importancia a jugar en casa delante de la propia afición, especialmente en partidos importantes, pero ¿hasta qué punto es esto importante? Pues bien, en los siguientes gráficos de columnas y de sectores interactivos, queda demostrado el efecto que produce jugar como local.
   </p>
+  <br>
   <div style="text-align:center">
     <iframe width="804" height="510" seamless frameborder="0" style="border:2px solid black" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTCNUqqWBPi3871BkfJkKShjXUFdDO7-KymT45Du9dJ0lfdQRTYqY6iGxLiiMXPwlgZcq4_ACdluER6/pubchart?oid=970781416&amp;format=interactive"></iframe>
   </div>
   <br>
   <p style="text-align: justify">
-    Histórico de resultados
+    Realmente, aunque al inicio del partido ambos equipos partan de las mismas condiciones, es cierto que el equipo local tiene ventaja sobre el equipo visitante. El hecho de conocer el estadio y tener a la afición a favor es trascendental en el resultado de los partidos. Como se puede apreciar en el gráfico de columnas, entre 2009 y 2019 en la Premier League ha habido un total de 1758 victorias locales, frente a las 1102 victorias visitantes y 940 empates. Estos datos son muy significativos, ya que son lo suficientemente amplios como para concluir que realmente afecta a los partidos. Se ha elegido un gráfico de columnas para representar este aspecto porque muestra con claridad los tres posibles resultados (Away - Home - Draw) y el número de partidos que han terminado con dichos resultados. 
+  </p>
+  <p style="text-align: justify">
+    Para conocer un poco más acerca de este tema, se va a utilizar un gráfico de sectores con los porcentajes de cada resultado. De esta forma, se podrá analizar el impacto real de jugar en casa, viendo la proporción de los resultados.
   </p>
   <br>
   <div style="text-align:center">
     <iframe width="633" height="398" seamless frameborder="0" style="border:2px solid black" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vT4wxwMC8Cspz19obquKOob7BTVVWEHZ6illB9KjEoZqPNMg5NuE1Xg-TlJf7q_Te8uR_VPTTWftSDq/pubchart?oid=1259252607&amp;format=interactive"></iframe>
   </div>
-  <h4>3.4 ¿Cómo afectan las tarjetas rojas a los equipos locales y a los equipos visitantes en el resultado de un partido?</h4>
   <p style="text-align: justify">
-    Para responder a esta pregunta, hay que tener en cuenta tanto las tarjetas rojas sacadas a equipos locales y a equipos visitantes, como el resultado de los partidos en los que se han sacado dichas tarjetas rojas. Los partidos pueden haber acabado en victoria del equipo local (h = Home), victoria del equipo visitante (a = Away), y en empate (d = Draw).
+    Con este tipo de diagrama se puede ver la proporción entre los tres tipos de resultado. Un 46.3% de los partidos finalizan con victoria local, un 29% con victoria visitante y un 24.7% con empate. Por tanto, gracias a estos dos gráficos se puede ver que el impacto de jugar en casa es realmente significativo.
+  </p>
+  <h4>3.2 ¿Qué impacto tienen las tarjetas en el resultado de los partidos? (Google Sheets)</h4>
+  <p style="text-align: justify">
+    Para responder a esta pregunta, hay que tener en cuenta tanto las tarjetas sacadas a equipos locales y a equipos visitantes, como el resultado de los partidos en los que se han sacado dichas tarjetas. Los partidos pueden haber acabado en victoria del equipo local (h = Home), victoria del equipo visitante (a = Away), y en empate (d = Draw). Se va a separar el análisis de las tarjetas rojas del análisis de las tarjetas amarillas, en dos gráficos diferentes.
   </p>
   <p style="text-align: justify">
-    Se ha elegido un gráfico de barras para representar la comparativa entre las tarjetas rojas de los equipos locales y las tarjetas rojas de los equipos visitantes, según el resultado de los partidos. Este tipo de gráfico es un tipo de representación bastante claro e intuitivo, por lo que es apropiado para responder a esta pregunta.
+    Se han elegido gráficos de barras interactivos para representar la comparativa entre las tarjetas a equipos locales y las tarjetas a equipos visitantes, según el resultado de los partidos. Este tipo de gráfico es un tipo de representación bastante claro e intuitivo, por lo que es apropiado para responder a esta pregunta.
   </p>
   <div style="text-align:center">
     <iframe width="1001" height="615" seamless frameborder="0" style="border:2px solid black" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqcAOyMslqYpdeQLVxvqKlbt6xqUd7WoCqx9bdil5954vDHKpBEunder_XHa9HBBXBMD3Yh7NCX9ws/pubchart?oid=757513812&amp;format=interactive"></iframe>
@@ -118,23 +125,33 @@
   <p style="text-align: justify">
     En el gráfico se puede ver como en la mayoría de casos en los que el equipo visitante recibe una tarjeta roja, el equipo local acaba ganando el partido (h = Home). En el caso de las amonestaciones a los equipos locales ocurre algo similar, normalmente el partido finaliza con la victoria del equipo visitante (a = Away). Pese a que la cifra también es significativa, es bastante inferior al caso anterior. Esto quiere decir que, en general, los equipos suele perder los partidos en los que son amonestados con tarjeta roja, pero especialmente si juegan como visitantes. En cuanto al empate (e = Empate), los datos están bastante igualados, 53 partidos con roja al equipo local han acabado en empate, mientras que 79 partidos con roja al equipo visitante han acabado en empate.
   </p>
-  <h4>3.5 ¿Cómo afectan las tarjetas amarillas a los equipos locales y a los equipos visitantes en el resultado de un partido?</h4>
+  <p style="text-align: justify">
+    En cuanto a las tarjetas amarillas, los datos están mucho más igualados y son menos trascendentes que con las tarjetas rojas. Los equipos locales han recibido un total de 5618 tarjetas amarillas, mientras que los equipos visitantes han recibido un total de 6731 tarjetas amarillas, valor ligeramente superior. Pero lo importante de este gráfico, más allá del número de tarjetas amarillas de cada equipo, es el resultado final de los partidos. En las victorias visitantes y en los empates, el número de tarjetas amarillas sacadas a ambos equipos está muy parejo. Sin embargo, en las victorias locales sí que se aprecia una diferencia entre las tarjetas amarillas sacadas a equipos locales y a equipos visitantes. En las victorias locales, los equipos locales han recibido 2324 tarjetas amarillas, frente a las 3063 recibidas por los equipos visitantes. 
+  </p>
+  <p style="text-align: justify">
+  Analizando estos datos, queda claro que la trascendencia en el resultado de los partidos de las tarjetas amarillas es mucho menor que la de las tarjetas rojas. De hecho, únicamente se aprecia una diferencia en los partidos que terminan con victoria local, pero dicha diferencia no es demasiado significativa, al contrario de lo que ocurre con las tarjetas rojas, que sí que suelen determinar el resultado del partido.
+  </p>
   <div style="text-align:center">
     <iframe width="1048" height="648" seamless frameborder="0" style="border:2px solid black" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vSL4noQLc_GfVyxkPQwZzDQs_Nq_tcstmzXuZ7ukDU7jfaQIplE785h-Y_zj0sbPIvHd5ijc_d3-U8w/pubchart?oid=1352620783&amp;format=interactive"></iframe>
   </div>
-  <h4>3.5 ¿Cómo afectan las tarjetas amarillas a los equipos locales y a los equipos visitantes en el resultado de un partido?</h4>
+  <h4>3.3 ¿Cuántos córners se suelen lanzar en los partidos y qué equipo es el que suele lanzar un mayor número córners? (Python - Google Colab)</h4>
+  <p style="text-align: justify">
+    El número de córners lanzados en un partido es otro tema que me genera bastante curiosidad. Dependiendo del estilo de juego y de las ocasiones generadas por cada equipo, tendrá un mayor o menor número de córners, pero ¿cuántos córners se suelen lanzar normalmente? ¿qué equipo suele lanzar más córners, el equipo local o el equipo visitante? En los siguientes histogramas se pueden ver respondidas estas preguntas. Se ha elegido este tipo de gráfico puesto que permite apreciar de un solo vistazo la distribución de los datos y, especialmente, su tendencia.
+  </p>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/C%C3%B3rners_Local.png" style="border:2px solid black" alt="Córners_Local">
   </div>
-  <h4>3.5 ¿Cómo afectan las tarjetas amarillas a los equipos locales y a los equipos visitantes en el resultado de un partido?</h4>
+  <p style="text-align: justify">
+    Como se puede ver en el histograma de córners a favor del equipo local por partido, la mayoría de equipos local lanzan entre 3 y 8 córners, aunque los valores claramente más repetidos son 4 y 5 córners por partido. Hay pocos equipos locales que lancen menos de 2 córners, y también hay pocos que lancen más de 11, aunque hay partidos en los que sí que se da el caso. En el siguiente histograma veremos lo que ocurre con los equipos visitantes.
+  </p>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/C%C3%B3rners_Visitante.png" style="border:2px solid black" alt="Córners_Visitante">
   </div>
-  <h4>3.5 ¿Cómo afectan las tarjetas amarillas a los equipos locales y a los equipos visitantes en el resultado de un partido?</h4>
+  <h4>3.4 ¿Cuáles son los resultados más repetidos en la Premier League? (Python - Google Colab)</h4>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/Resultados_Comunes.png" style="border:2px solid black" alt="Resultados_Comunes">
   </div>
-  <h4>3.5 ¿Cómo afectan las tarjetas amarillas a los equipos locales y a los equipos visitantes en el resultado de un partido?</h4>
+  <h4>3.5 ¿Cuáles han sido los partidos con más disparos por parte de un mismo equipo y cuántos de ellos han sido a portería? (DataWrapper)</h4>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/Top10Tiros.png" width="700" height="1100" style="border:2px solid black" alt="Top10_Tiros">
   </div>
