@@ -21,17 +21,17 @@
   <h3>1. Introducción</h3>
   <div class="text">
     <p style="text-align: justify">
-    El trabajo práctico de la asignatura de Visualización de Datos consiste en la generación de una serie de visualizaciones gráficas a partir de un conjunto de datos utilizando varias herramientas. El objetivo es contestar a algunas preguntas relacionadas con el conjunto de datos mediante dichas gráficas.
+    El trabajo práctico de la asignatura de Visualización de Datos consiste en la generación de una serie de visualizaciones gráficas a partir de un conjunto de datos utilizando varias herramientas para ello. El objetivo es responder a algunas preguntas relacionadas con el conjunto de datos mediante dichos gráficos, argumentando las herramientas y los tipos de gráficos elegidos, y el resultado.
     </p>
     <p style="text-align: justify">
-    El conjunto de datos elegido contiene los registros históricos de los partidos transcurridos entre 2009 y 2019 en la Premier League, liga inglesa de fútbol. Desde hace años me interesa el análisis de datos relacionados con el deporte, especialmente con el fútbol, por lo que en asignaturas anteriormente cursadas como Minería de Datos o Estadística Avanzada utilicé este dataset para llevar a cabo los trabajos prácticos.
+    El conjunto de datos elegido contiene los registros históricos de los partidos transcurridos entre 2009 y 2019 en la Premier League, liga inglesa de fútbol. Desde hace años me interesa mucho el análisis de datos relacionados con el deporte, especialmente con el fútbol, por lo que en asignaturas anteriormente cursadas como Minería de Datos o Estadística Avanzada utilicé este dataset para llevar a cabo los trabajos prácticos.
     </p>
     <p style="text-align: justify">
       El dataset pertenece a Kaggle, y se puede encontrar en el siguiente enlace:
       <a href="https://www.kaggle.com/datasets/aj7amigo/english-premier-league-data-2009-2019" target="_blank">
         https://www.kaggle.com/datasets/aj7amigo/english-premier-league-data-2009-2019
       </a>.
-      Pese a que originalmente ya era un dataset bastante completo y limpio, en la asignatura de Minería de Datos pasó por un preprocesado de datos, incluyendo la limpieza y las transformaciones necesarias para tener un dataset preparado. Por ello, el conjunto de datos está listo para la visualización e interpretación de sus datos.
+      Pese a que originalmente ya era un dataset bastante completo y limpio, en la asignatura de Minería de Datos pasó por un preprocesado de datos, incluyendo la limpieza y las transformaciones necesarias para obtener un dataset preparado. Por ello, tras estas modificaciones, el conjunto de datos está preparado para la visualización e interpretación de sus datos.
     </p>
 
     <h4>1.1 Descripción de los datos</h4>
@@ -46,7 +46,7 @@
     <br>
       - Nombre del árbitro.
     <br>
-      - Número total de tiros y de tiros a puerta de cada equipo. 
+      - Número total de tiros, y de tiros a portería de cada equipo. 
     <br>
       - Número de faltas cometidas y de tarjetas recibidas por cada equipo. 
     <br>
@@ -59,34 +59,68 @@
 
     <h4>1.2 Audiencia</h4>
     <p style="text-align: justify">
-      La audiencia es cualquier persona interesada en la visualización de datos, especialmente si es aficionada al mundo del deporte, aunque está enfocado sobre todo en el alumnado de la asignatura de Visualización de Datos. Aplicando algunas de las herramientas aprendidas en esta asignatura, se responderá a las preguntas elegidas de forma que la audiencia pueda llegar a comprender el objetivo y la problemática del trabajo práctico teniendo un mayor o un menor conocimiento sobre este tema.
+      La audiencia es cualquier persona aficionada al mundo del deporte, especialmente al fútbol. Está destinado tanto a personas con conocimientos sobre la visualización de datos como a personas sin demasiadas nociones de este campo, ya que cuenta con gráficos fáciles de interpretar. Aplicando algunas de las herramientas aprendidas en esta asignatura, se responderá a las preguntas elegidas de forma que la audiencia pueda llegar a comprender el objetivo y la problemática del trabajo práctico teniendo un mayor o un menor conocimiento sobre este tema.
     </p>
 
     <h4>1.3 Objetivo y preguntas</h4>
     <p style="text-align: justify">
-      El objetivo de este trabajo práctico consiste en responder a las siguientes preguntas relacionadas con el dataset de los resultados de la Premier League, de forma que se puedan llegar a visualizar y a comprender los datos generados por algunas herramientas a través de gráficos y diagramas.
+      El objetivo de este trabajo práctico consiste en responder a las siguientes preguntas relacionadas con el dataset de los resultados de la Premier League, de forma que se puedan llegar a visualizar y a comprender los datos generados por algunas herramientas a través de gráficos y diagramas. Todas estas preguntas, están enfocadas al conocimiento de las variables que puedan influir en el resultado de un partido de fútbol: el impacto de las tarjetas, la importancia de jugar en casa, el número de córners... Son preguntas que siempre me he planteado, y que un gran porcentaje de la población aficionada al deporte también, por lo que creo que puede ser un análisis bastante atractivo para la audiencia. 
       <br><br>
-      Preguntas a responder:
+      Teniendo en cuenta todo esto, las preguntas planteadas son las siguientes:
       <br><br>
-      1 - Se suele decir que el equipo que juega en su propio estadio delante de su propia afición tiene ventaja, pero ¿es cierto que los equipos locales suelen conseguir más victorias que los equipos visitantes?
+      <span class="negrita">1 - </span>
+       Se suele decir que el equipo que juega en su propio estadio delante de su propia afición tiene ventaja, pero ¿es cierto que los equipos locales suelen conseguir más victorias que los equipos visitantes?
       <br>
-      2 - ¿Qué impacto tienen las tarjetas en el resultado de los partidos?
+      <span class="negrita">2 - </span>
+       ¿Qué impacto tienen las tarjetas en el resultado de los partidos?
       <br>
-      3 - ¿Cuántos córners se suelen lanzar en los partidos y qué equipo es el que suele lanzar un mayor número córners?
+      <span class="negrita">3 - </span>
+       ¿Cuántos córners se suelen lanzar en los partidos y qué equipo es el que suele lanzar un mayor número córners?
       <br>
-      4 - ¿Cuáles son los resultados más repetidos en la Premier League?
+      <span class="negrita">4 - </span>
+       ¿Cuáles son los resultados más repetidos en la Premier League?
       <br>
-      5 - ¿Cuáles han sido los partidos con más tiros por parte de un mismo equipo y cuántos de ellos han sido a portería?
+      <span class="negrita">5 - </span>
+       ¿Cuáles han sido los partidos con más tiros por parte de un mismo equipo y cuántos de ellos han sido a portería?
       <br><br>
-      Estas preguntas realmente son preguntas que siempre me han interesado acerca de diferentes aspectos de los partidos de fútbol. Para responderlas, se utilizarán algunas herramientas para la creación de gráficos, como Google Sheet, Python (Google Colab) y DataWrapper.
+      Para responder a estas preguntas, se utilizarán algunas herramientas como Google Sheet, Python (Google Colab) y DataWrapper, que permitirán crear los gráficos necesarios.
     </p>
 
   <h3>2. Metodología</h3>
   <p style="text-align: justify">
-    En este apartado se explicarán las diferentes herramientas utilizadas para la elaboración de las gráficas de este trabajo práctico, justificando su uso y el de los tipos de gráficos elegidos.
+    En este apartado se explican las diferentes herramientas utilizadas para la elaboración de las gráficas de este trabajo práctico, así como los tipos de gráficos utilizados. 
+    <br><br>
+    Para responder a las 5 cuestiones, se han utilizado 3 herramientas:
+    <br><br>
+    <span class="negrita">- Google Sheets: </span>
+       Aplicación de hojas de cálculo en línea donde se pueden compartir documentos y trabajar de forma colaborativa. Permite crear listas, gráficos, tablas dinámicas, fórmulas... En este trabajo práctico se utiliza para realizar los cuatro gráficos de los puntos 3.1 y 3.2 (gráficos de columnas, barras y sectores).
+      <br><br>
+      <span class="negrita">- Python (Google Colab): </span>
+       Google Colab es un producto de Google que permite escribir y ejecutar código de Python en el navegador, siendo muy adecuado para tareas de aprendizaje automático y análisis de datos. Python es un lenguaje de programación potente y fácil de aprender, con tipado dinámico, con estructuras de datos de alto nivel eficientes y un sistema de programación orientado a objetos. En este trabajo práctico, se utiliza para realizar los tres gráficos de los puntos 3.3 y 3.4 (gráficos de columnas e histogramas). Se adjunta libreta de Google Colab (.ypynb).
+      <br><br>
+      <span class="negrita">- DataWrapper: </span>
+       Herramienta de visualización de datos que permite crear gráficas, mapas y tablas interactivos. En este trabajo práctico se utiliza para realizar el gráfico del punto 3.5 (gráfico de barras).
+      <br><br><br>
+    En cuanto a los tipos de gráficos, se han utilizado los siguientes 4 tipos de gráficos:
+    <br><br>
+    <span class="negrita">- Gráfico de columnas: </span>
+       Representa los datos en forma de rectángulos, en vertical, donde la longitud resulta proporcional al dato que representa. Resultan sencillos de interpretar y no se necesita emplear recursos extra en explicarlos, ya que son muy comunes. Además, con un vistazo se pueden comparar los valores extremos y la separación entre unos datos y otros.
+      <br><br>
+      <span class="negrita">- Gráfico de barras: </span>
+       Es la versión horizontal del gráfico de columnas. Resulta muy recomendable para representar datos divididos por categorías y permite escribir nombres largos para las etiquetas de dichas categorías. Además, permite llevar a cabo una lectura fluida, conociendo primero las categorías y, después, los datos de los que hablan dichan categorías.
+      <br><br>
+      <span class="negrita">- Gráfico de sectores o circular (Pie Chart): </span>
+       Gráfico circular dividido en sectores que representa una proporción de diferentes categorías sobre el total. Es habitual usarlo para mostrar el porcentaje, donde la suma de los sectores es igual al 100%.
+      <br><br>
+      <span class="negrita">- Histograma: </span>
+       Muestra la forma de los valores, o la distribución, de una variable continua. Ayuda a ver el centro, la extensión y la forma de un conjunto de datos, además de los valores extremos o atípicos.
+      <br><br>
   </p>
 
   <h3>3. Resultados</h3>
+  <p style="text-align: justify">
+    Tras analizar las cuestiones antes nombradas y su posible enfoque, utilizando las tres herramientas para la visualización de datos (Google Sheets, Python-Google Colab y DataWrapper), se han llevado a cabo 8 gráficos que responden a las preguntas, detallando ciertos aspectos importantes de ellas.
+  </p>
   <h4>3.1 Se suele decir que el equipo que juega en su propio estadio delante de su propia afición tiene ventaja, pero ¿es cierto que los equipos locales suelen conseguir más victorias que los equipos visitantes? (Google Sheets)</h4>
   <p style="text-align: justify">
     En el mundo del fútbol siempre se le ha dado mucha importancia a jugar en casa delante de la propia afición, especialmente en partidos importantes, pero ¿hasta qué punto es esto importante? Pues bien, en los siguientes gráficos de columnas y de sectores interactivos, queda demostrado el efecto que produce jugar como local.
@@ -100,7 +134,7 @@
     Realmente, aunque al inicio del partido ambos equipos partan de las mismas condiciones, es cierto que el equipo local tiene ventaja sobre el equipo visitante. El hecho de conocer el estadio y tener a la afición a favor es trascendental en el resultado de los partidos. Como se puede apreciar en el gráfico de columnas, entre 2009 y 2019 en la Premier League ha habido un total de 1758 victorias locales, frente a las 1102 victorias visitantes y 940 empates. Estos datos son muy significativos, ya que son lo suficientemente amplios como para concluir que realmente afecta a los partidos. Se ha elegido un gráfico de columnas para representar este aspecto porque muestra con claridad los tres posibles resultados (Away - Home - Draw) y el número de partidos que han terminado con dichos resultados. 
   </p>
   <p style="text-align: justify">
-    Para conocer un poco más acerca de este tema, se va a utilizar un gráfico de sectores con los porcentajes de cada resultado. De esta forma, se podrá analizar el impacto real de jugar en casa, viendo la proporción de los resultados.
+    Para que quede reflejado con mayor claridad, se va a utilizar un gráfico de sectores con los porcentajes de cada resultado. De esta forma, se podrá analizar el impacto real de jugar en casa, viendo la proporción de los resultados.
   </p>
   <br>
   <div style="text-align:center">
@@ -120,7 +154,7 @@
     <iframe width="1001" height="615" seamless frameborder="0" style="border:2px solid black" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vRqcAOyMslqYpdeQLVxvqKlbt6xqUd7WoCqx9bdil5954vDHKpBEunder_XHa9HBBXBMD3Yh7NCX9ws/pubchart?oid=757513812&amp;format=interactive"></iframe>
   </div>
   <p style="text-align: justify">
-    Como se puede apreciar en el gráfico, realmente las tarjetas rojas sí que tienen bastante relación con el resultado final del partido. En el periodo entre 2009 y 2019 en la Premier League, los equipos locales han recibido un total de 226 tarjetas rojas, mientras que los equipos visitantes han recibido un total de 331 tarjetas rojas. Por tanto, podemos ver que los jugadores de los equipos visitantes tienen un número de expulsiones notablemente superior al de los jugadores locales. Ahora bien, ¿qué impacto tiene esto en el resultado de los partidos?
+    Como se puede apreciar en el gráfico, realmente las tarjetas rojas sí que tienen bastante relación con el resultado final del partido. En el periodo entre 2009 y 2019 en la Premier League, los equipos locales han recibido un total de 226 tarjetas rojas, mientras que los equipos visitantes han recibido un total de 331 tarjetas rojas. Por tanto, podemos ver que los jugadores de los equipos visitantes tienen un número de expulsiones notablemente superior al de los jugadores locales. Ahora bien, ¿qué impacto tiene esto en el resultado de los partidos?.
   </p>
   <p style="text-align: justify">
     En el gráfico se puede ver como en la mayoría de casos en los que el equipo visitante recibe una tarjeta roja, el equipo local acaba ganando el partido (h = Home). En el caso de las amonestaciones a los equipos locales ocurre algo similar, normalmente el partido finaliza con la victoria del equipo visitante (a = Away). Pese a que la cifra también es significativa, es bastante inferior al caso anterior. Esto quiere decir que, en general, los equipos suele perder los partidos en los que son amonestados con tarjeta roja, pero especialmente si juegan como visitantes. En cuanto al empate (e = Empate), los datos están bastante igualados, 53 partidos con roja al equipo local han acabado en empate, mientras que 79 partidos con roja al equipo visitante han acabado en empate.
@@ -136,25 +170,97 @@
   </div>
   <h4>3.3 ¿Cuántos córners se suelen lanzar en los partidos y qué equipo es el que suele lanzar un mayor número córners? (Python - Google Colab)</h4>
   <p style="text-align: justify">
-    El número de córners lanzados en un partido es otro tema que me genera bastante curiosidad. Dependiendo del estilo de juego y de las ocasiones generadas por cada equipo, tendrá un mayor o menor número de córners, pero ¿cuántos córners se suelen lanzar normalmente? ¿qué equipo suele lanzar más córners, el equipo local o el equipo visitante? En los siguientes histogramas se pueden ver respondidas estas preguntas. Se ha elegido este tipo de gráfico puesto que permite apreciar de un solo vistazo la distribución de los datos y, especialmente, su tendencia.
+    El número de córners lanzados en un partido es otro tema que me genera bastante curiosidad. Dependiendo del estilo de juego y de las ocasiones generadas por cada equipo, tendrá un mayor o menor número de córners, pero ¿cuántos córners se suelen lanzar normalmente? ¿qué equipo suele lanzar más córners, el equipo local o el equipo visitante? En los siguientes histogramas se pueden ver respondidas estas preguntas. Se ha elegido este tipo de gráfico puesto que permite apreciar de un solo vistazo la distribución de los datos y, especialmente, su tendencia. Se va a separar el análisis de los córners de los equipos locales del análisis de los córners de los equipos visitantes, en dos gráficos diferentes, con la idea de tener mayor claridad.
   </p>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/C%C3%B3rners_Local.png" style="border:2px solid black" alt="Córners_Local">
   </div>
   <p style="text-align: justify">
-    Como se puede ver en el histograma de córners a favor del equipo local por partido, la mayoría de equipos local lanzan entre 3 y 8 córners, aunque los valores claramente más repetidos son 4 y 5 córners por partido. Hay pocos equipos locales que lancen menos de 2 córners, y también hay pocos que lancen más de 11, aunque hay partidos en los que sí que se da el caso. En el siguiente histograma veremos lo que ocurre con los equipos visitantes.
+    Como se puede ver en el histograma de córners a favor del equipo local por partido, la mayoría de equipos locales lanzan entre 3 y 8 córners, aunque los valores claramente más repetidos son 4 y 5 córners por partido. Hasta en 500 ocasiones el equipo local ha ejecutado 4 o 5 córners en esa década. Hay pocos equipos locales que lancen menos de 2 córners, y también hay pocos que lancen más de 11, aunque hay partidos en los que sí se da el caso. 
+    <br><br>
+    En el siguiente histograma veremos lo que ocurre con los equipos visitantes.
   </p>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/C%C3%B3rners_Visitante.png" style="border:2px solid black" alt="Córners_Visitante">
   </div>
+  <p style="text-align: justify">
+    En el histograma de córners a favor del equipo visitante, se puede ver como la mayoría de equipos visitantes lanzan entre 3 y 7 córners, aunque los valores claramente más repetidos son 3, 4 y 5 córners por partido. Hay pocos equipos locales que lancen menos de 2 córners, y también hay pocos que lancen más de 8, aunque hay partidos en los que sí se da el caso. 
+  </p>
+  <p style="text-align: justify">
+    Comparando los resultados de ambos gráficos, los números son muy similares aunque ligeramente inferiores en el caso de los equipos visitantes, como es normal. En en gráfico del punto 3.1 se pudo apreciar el impacto que supone jugar en casa para el resultado final del partido, con los córners ocurre algo similar. Los equipos locales suelen lanzar entre 3 y 8 córners, mientras que los equipos visitantes entre 3 y 7 córners. Prácticamente en 600 partidos el equipo visitante ha lanzado 4 córners. Pero donde realmente hay diferencia es en los valores más altos, los equipos locales normalmente no lanzan más de 11 córners, mientras que los equipos locales no lanzan más de 8 o 9 córners. Por tanto, la tendencia es muy similar, pero los equipos visitantes tienen datos significativamente menores a los equipos locales en lo que se refiere a número de córners por partido.
+  </p>
   <h4>3.4 ¿Cuáles son los resultados más repetidos en la Premier League? (Python - Google Colab)</h4>
+  <p style="text-align: justify">
+    Tras analizar los resultados de los partidos de la Premier League entre 2009 y 2019, se he llevado a cabo un gráfico de columnas con los resultados más comunes, el número de partidos en los que se han dado y el porcentaje respecto al total de partidos en los que se ha dado cada uno de los resultados.
+  </p>
   <div style="text-align:center"> 
     <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/Resultados_Comunes.png" style="border:2px solid black" alt="Resultados_Comunes">
   </div>
+  <p style="text-align: justify">
+    En el gráfico de columnas, vemos como los resultados están bastante repartidos, pero hay dos claros ganadores: 1-1 y 1-0. El resultado de 1-1 es el más común, ya que se ha dado en casi 400 partidos y equivale a un 10.5% de los partidos. El segundo resultado más común es el 1-0, que se ha dado también en cerca de 400 partidos y equivale al 9.9% de los partidos. Más allá de estos dos primeros resultados, destacan el 2-1 y el 2-0, resultados también bastante repetidos, con 8.5% y 8.3%, respectivamente. Una vez más, se demuestra que los equipos locales suelen tener ligeramente mejores resultados que los equipos visitantes. Las victorias visitantes por la mínima se dan en un 6.9% (1-2) y en un 6.7% (0-1), porcentajes altos pero mucho menores a los de las victorias locales.
+  </p>
   <h4>3.5 ¿Cuáles han sido los partidos con más disparos por parte de un mismo equipo y cuántos de ellos han sido a portería? (DataWrapper)</h4>
+  <p style="text-align: justify">
+    Durante la década de 2009 a 2019, se han producido grandes goleadas en la Premier League, acabando algunos partidos con resultados muy elevados como 9-1, 8-0, 7-0... ¿Cual será la mayor cantidad de disparos que habrá realizado un equipo en un mismo partido? ¿Cúantos de ellos habrán ido a puerta? En el siguiente gráfico de barras agrupadas se puede ver el Top 10 del mayor número de disparos hechos por un mismo equipo en un partido.
+  </p>
   <div style="text-align:center"> 
-    <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/Top10Tiros.png" width="700" height="1100" style="border:2px solid black" alt="Top10_Tiros">
+    <img src="https://raw.githubusercontent.com/carlosgilrodrigo/08MBID---Visualizacion-de-Datos/main/Top10DisparosEquipos.png" width="700" height="1100" style="border:2px solid black" alt="Top10_Tiros">
   </div>
+  <p style="text-align: justify">
+    El mayor número de disparos lo alcanzó el Manchester City, con 43, de los cuales 16 fueron a portería. Le sigue el Chelsea con 39 disparos, 9 de ellos a portería. Son valores muy altos para un partido de fútbol, la media de disparos es mucho menor. Por tanto, fueron partidos de mucho dominio por parte de un mismo equipo, con una gran cantidad de ocasiones y, en la mayoría de casos, con muchos goles.
+  </p>
   <h3>4. Conclusión</h3>
-
+  <p style="text-align: justify">
+    Me gustaría dividir este apartado en dos partes: conclusiones sobre el objetivo propuesto y conclusiones personales sobre el trabajo práctico.
+  </p><p style="text-align: justify">
+    En cuanto a las conclusiones sobre el objetivo propuesto, creo que se ha logrado responder con éxito a las preguntas iniciales, de forma fácilmente interpretable por la audiencia, analizando el impacto de ciertas variables en el resultado de los partidos (en este caso, de la Premier League) y estudiando algunas estadísticas interesantes de la liga inglesa en la década de 2009 a 2019. Algunos de los gráficos han respondido directamente al problema planteado, otros en cambio han necesitado otro gráfico complementario para evitar crear un gráfico excesivamente complejo y lleno de información, pero todos ellos han permitido visualizar los datos concretos enfocados en las cuestiones.
+  </p>
+  </p><p style="text-align: justify">
+    Por último, a nivel personal, creo que este trabajo práctico ha supuesto un aprendizaje tanto en lo referente a la visualización de datos, como en lenguajes como Python, HTML y CSS. El hecho de realizar algunos gráficos en Google Colab con Python, me ha permitido conocer más este lenguaje y la forma en la que se debe trabajar con él para transformar datos y generar visualizaciones de los mismos. En cuanto a Google Sheets y DataWrapper, me han parecido herramientas muy útiles y fáciles de entender y de usar para la visualización de datos. Quizás Datawrapper ofrece funciones más avanzadas, pero Google Sheets me ha resultado muy fácil de utilizar y me ha permitido personalizar muchos aspectos de los gráficos.
+  </p>
+  <h3>5. Referencias</h3>
+  Google Sheets:
+  <br>
+  <a href="https://excelyvba.com/que-es-google-sheets/" target="_blank">
+    https://excelyvba.com/que-es-google-sheets/
+  </a>
+  <br>
+  <a href="https://datademia.es/blog/que-es-google-sheets" target="_blank">
+    https://datademia.es/blog/que-es-google-sheets
+  </a>
+  <br><br>
+  Google Colab:
+  <br>
+  <a href="https://research.google.com/colaboratory/intl/es/faq.html#:~:text=Colaboratory%2C%20o%20%22Colab%22%20para,an%C3%A1lisis%20de%20datos%20y%20educaci%C3%B3n." target="_blank">
+    https://research.google.com/colaboratory/intl/es/faq.html#:~:text=Colaboratory%2C%20o%20%22Colab%22%20para,an%C3%A1lisis%20de%20datos%20y%20educaci%C3%B3n.
+  </a>
+  <br><br>
+  Python:
+  <br>
+  <a href="https://docs.python.org/es/3/tutorial/" target="_blank">
+    https://docs.python.org/es/3/tutorial/
+  </a>
+  <br><br>
+  DataWrapper:
+  <br>
+  <a href="https://www.datawrapper.de/" target="_blank">
+    https://www.datawrapper.de/
+  </a>
+  <br><br>
+  Tipos de gráficos:
+  <br>
+    Manual de la asignatura 'Visualización de Datos', Raúl Reyero Díez
+  <br><br>
+  Histograma:
+  <br>
+  <a href="https://www.jmp.com/es_co/statistics-knowledge-portal/exploratory-data-analysis/histogram.html" target="_blank">
+    https://www.jmp.com/es_co/statistics-knowledge-portal/exploratory-data-analysis/histogram.html
+  </a>
+  <br><br>
+  Elección del dataset:
+  <br>
+  <a href="https://www.kaggle.com/datasets/aj7amigo/english-premier-league-data-2009-2019" target="_blank">
+    https://www.kaggle.com/datasets/aj7amigo/english-premier-league-data-2009-2019
+  </a>
+  <br>
 </div>
